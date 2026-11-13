@@ -178,8 +178,8 @@ public class OverviewScreen extends Screen {
         sessionButton = null;
 
         // top bar, right side: [SESSION 24H 7D 30D ALL]  [RESET SESSION]
-        int rw = wb("RESET SESSION", 0.7f) + 24;
-        resetBtn = btn("", fx + fw - 10 - rw, fy + 8, rw, () -> {
+        int resetW = wb("RESET SESSION", 0.7f) + 24;
+        resetBtn = btn("", fx + fw - 10 - resetW, fy + 8, resetW, () -> {
             long t = System.currentTimeMillis();
             if (t > resetArmedUntil) { resetArmedUntil = t + 3000; return; }   // first click asks to confirm
             resetArmedUntil = 0;
